@@ -1,0 +1,139 @@
+<!--
+ * CoreUI - Open Source Bootstrap Admin Template
+ * @version v1.0.0-alpha.4
+ * @link http://coreui.io
+ * Copyright (c) 2017 creativeLabs Łukasz Holeczek
+ * @license MIT
+ -->
+<!DOCTYPE html>
+<html lang="en" ng-app="msfldash">
+<head>
+    <base href="http://localhost:8888/safl/#!/" />
+    <!-- <link rel="shortcut icon" href="img/favicon.png">-->
+
+    <title>SaaS - SOC Frontline Dashboard</title>
+    <!-- Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Main styles for this application -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Angular Js  -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+
+
+    <!-- Custom scripts required by this view -->
+    <script src="js/views/main.js"></script>
+
+</head>
+
+<!-- BODY options, add following classes to body to change options
+
+// Header options
+1. '.header-fixed'					- Fixed Header
+
+// Sidebar options
+1. '.sidebar-fixed'					- Fixed Sidebar
+2. '.sidebar-hidden'				- Hidden Sidebar
+3. '.sidebar-off-canvas'		- Off Canvas Sidebar
+4. '.sidebar-compact'				- Compact Sidebar Navigation (Only icons)
+
+// Aside options
+1. '.aside-menu-fixed'			- Fixed Aside Menu
+2. '.aside-menu-hidden'			- Hidden Aside Menu
+3. '.aside-menu-off-canvas'	- Off Canvas Aside Menu
+
+// Footer options
+1. '.footer-fixed'						- Fixed footer
+
+-->
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+
+    <header class="app-header navbar">
+        <button class="navbar-toggler mobile-sidebar-toggler hidden-lg-up" type="button">☰</button>
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav navbar-nav hidden-md-down">
+            <li class="nav-item">
+                <a class="nav-link navbar-toggler sidebar-toggler" href="#">☰</a>
+            </li>
+
+        </ul>
+    </header>
+
+    <div class="app-body">
+        <div class="sidebar">
+            <nav class="sidebar-nav">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-info">NEW</span></a>
+                    </li>
+
+                    <li class="nav-title">
+                        Audit Center
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Call Audit </a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-font-awesome.html"><i class="icon-star"></i> ITM SaaS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i>E-Discovery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="icons-simple-line-icons.html"><i class="icon-star"></i>Digital Safe</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-dropdown">
+                        <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Ticket Audit </a>
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!//itmticketaudit"><i class="icon-star"></i> ITM SaaS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!/edticketaudit"><i class="icon-star"></i>E-Discovery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#!/dsticketaudit"><i class="icon-star"></i>Digital Safe</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main content -->
+        <main class="main">
+
+
+            <div class="container-fluid">
+                <div ng-view></div>
+            </div>
+            <!-- /.conainer-fluid -->
+        </main>
+    </div>
+
+    <footer class="app-footer">
+        <a href="http://coreui.io">CoreUI</a> © 2017 creativeLabs.
+        <span class="float-right">Powered by <a href="http://coreui.io">CoreUI</a>
+        </span>
+    </footer>
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/pace/pace.min.js"></script>
+
+    <!-- GenesisUI main scripts -->
+
+    <script src="js/app.js"></script>
+
+    <!-- Plugins and scripts required by this views -->
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <strong>E-Discovery Ticket Audit Form</strong>
+            </div>
+            <div class="card-block">
+                <form enctype="multipart/form-data" ng-controller="cedta" ng-submit="submit()" class="form-horizontal ">
+                    <!--Input group Ticket Number and Agent Name-->
+                    <div class="form-group form-inline col-md-12" style="padding-bottom:20px;padding-top:20px;border:1px solid #cecece;">
+                        <label class="col-md-2 control-label text-right">Ticket Number</label>
+                        <div class="col-md-3"><input type="text" ng-model="dsta.ticketno" class="form-control"></div>
+                        <label class="col-md-2 control-label text-right">Agent Name</label>
+                        <div class="col-md-5">
+                            <select class="form-control" style="width:250px" ng-model="edta.agentname">
+                                <option value="preneesh">Preneesh</option>
+                                <option value="vasanth">Vasanth</option>
+                                <option value="charan">Charan Tej</option>
+                                <option value="titus">Titus</option>
+                                <option value="girish">Girish</option>
+                                <option value="vitt">Vittal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div></div>
+                    <!--Input group - 1, 2, 3-->
+                    <div class="form-group" style="padding-bottom:20px; border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Fields accuracy Client Name - Hosting / Billing Entity ID:</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the FL Engineer choose the proper Client Name – Hosting, Billing entity?</label>
+                                <div class="col-sm-2 form-inline">
+                                    <label class="radio-inline">
+                            <input type="radio" name="1r" ng-model="edta.r1" value="6.67">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="1r" ng-model="edta.r1" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="1r" ng-model="edta.r1" value="6.67"> &nbsp;NA &nbsp;
+                            </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <textarea class="form-control" ng-model="edta.textarea1" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label class="col-sm-6 control-label text-right">b. Did the FL Engineer assign the ticket to correct Assignment group?(PM)</label>
+                            <div class="col-sm-2 form-inline"><label class="radio-inline">
+                            <input type="radio" name="2r" ng-model="edta.r2" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="2r" ng-model="edta.r2" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="2r" ng-model="edta.r2" value="5"> &nbsp;NA &nbsp;
+                            </label>
+                            </div>
+                            <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea2" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label class="col-sm-6 control-label text-right">c. Did the FL Engineer follow the correct subject line with necessary modifications?</label>
+                            <div class="col-sm-2 form-inline"><label class="radio-inline">
+                            <input type="radio" name="3r" ng-model="edta.r3" value="6.67">&nbsp; Yes &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="3r" ng-model="edta.r3" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="3r" ng-model="edta.r3" value="6.67"> &nbsp;NA &nbsp;
+                            </label>
+                            </div>
+                            <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea3" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                        </div>
+                       </div>
+                    <div></div>
+                    <!--Input group - 4, 5-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Were the related records associated and documented accordingly</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. If present, were the related records documented in the case? (for example, linking HE tickets to HOS tickets) </label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="5r" ng-model="edta.r5" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="5r" ng-model="edta.r5" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="5r" ng-model="edta.r5" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea5" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">b. Did the FL Engineer collect the required information from client to create a HE ticket</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="6r" ng-model="edta.r6" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="6r" ng-model="edta.r6" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="6r" ng-model="edta.r6" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea6" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input group - 6, 7, 8, 9, 10-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Did the Frontline Engineer follow the right process?</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the FL Engineer send the first response saying that the ticket is assigned to E-Discovery Services or assigned to FL Engineer? </label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="7r" ng-model="edta.r7" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="7r" ng-model="edta.r7" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="7r" ng-model="edta.r7" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea7" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">b. Did the FL Engineer activate the correct account of the user and reset the password?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="8r" ng-model="edta.r8" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="8r" ng-model="edta.r8" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="8r" ng-model="edta.r8" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea8" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">c. Did the FL Engineer send the right template to the user after the password reset is done?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="9r" ng-model="edta.r9" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="edta.r9" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="edta.r9" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea9" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+							 <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">d. Did the FL Engineer send the password to the user without marking others in the email?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="9r" ng-model="edta.r9" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="edta.r9" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="edta.r9" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea9" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+							 <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">e. Did the FL Engineer respond to queries from HE team and inform the client on a timely basis?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="9r" ng-model="edta.r9" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="edta.r9" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="edta.r9" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea9" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input group - 11, 12, 13, 14-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Did the communication with the customer adhere to our standards in terms of professionalism and soft skills?</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the agent address the customer with his first name or with Mr. Last Name?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="12r" ng-model="edta.r12" value="6.25">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="12r" ng-model="edta.r12" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="12r" ng-model="edta.r12" value="6.25"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea12" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">b. Customer communication – Was it crisp and to the point?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="13r" ng-model="edta.r13" value="6.25">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="13r" ng-model="edta.r13" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="13r" ng-model="edta.r13" value="6.25"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea13" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">c. Did the FL Engineer communicate with quality writing, without spell and grammatical errors?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="14r" ng-model="edta.r14" value="6.25">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="14r" ng-model="edta.r14" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="14r" ng-model="edta.r14" value="6.25"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea14" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+							<div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">a. Did the FL Engineer use the correct Signature?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="14r" ng-model="edta.r14" value="6.25">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="14r" ng-model="edta.r14" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="14r" ng-model="edta.r14" value="6.25"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="edta.textarea14" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer col-md-12">
+                        <center>
+                            <button type="submit" class="btn btn-primary btn-xs"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                            <button type="reset" class="btn btn-danger btn-xs"><i class="fa fa-ban"></i> Reset</button>
+                        </center>
+                    </div>
+                </form>
+            </div>
+        </div>

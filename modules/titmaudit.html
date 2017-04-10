@@ -1,0 +1,282 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <strong>ITM SaaS Ticket Audit Form</strong>
+            </div>
+            <div class="card-block">
+                <form enctype="multipart/form-data" ng-controller="citta" ng-submit="submit()" class="form-horizontal ">
+                    <!--Input group Ticket Number and Agent Name-->
+                    <div class="form-group form-inline col-md-12" style="padding-bottom:20px;padding-top:20px;border:1px solid #cecece;">
+                        <label class="col-md-2 control-label text-right">Ticket Number</label>
+                        <div class="col-md-3"><input type="text" ng-model="dsta.ticketno" class="form-control"></div>
+                        <label class="col-md-2 control-label text-right">Agent Name</label>
+                        <div class="col-md-5">
+                            <select class="form-control" style="width:250px" ng-model="itta.agentname">
+                                <option value="preneesh">Preneesh</option>
+                                <option value="vasanth">Vasanth</option>
+                                <option value="charan">Charan Tej</option>
+                                <option value="titus">Titus</option>
+                                <option value="girish">Girish</option>
+                                <option value="vitt">Vittal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div></div>
+                    <!--Input group - 1, 2, 3, 4-->
+                    <div class="form-group" style="padding-bottom:20px; border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Fields accuracy: Service Catalog item / Severity / Resolution code / VTC :</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the FL Engineer choose the proper service catalog item or severity to adhere to the customer request?</label>
+                                <div class="col-sm-2 form-inline">
+                                    <label class="radio-inline">
+                            <input type="radio" name="1r" ng-model="itta.r1" value="3.75">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="1r" ng-model="itta.r1" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="1r" ng-model="itta.r1" value="3.75"> &nbsp;NA &nbsp;
+                            </label>
+                                </div>
+                                <div class="col-sm-3">
+                                    <textarea class="form-control" ng-model="itta.textarea1" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label class="col-sm-6 control-label text-right">b. Did the FL Engineer classify the issue correctly – SR or IM as required?</label>
+                            <div class="col-sm-2 form-inline"><label class="radio-inline">
+                            <input type="radio" name="2r" ng-model="itta.r2" value="3.75">&nbsp; Yes &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="2r" ng-model="itta.r2" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="2r" ng-model="itta.r2" value="3.75"> &nbsp;NA &nbsp;
+                            </label>
+                            </div>
+                            <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea2" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label class="col-sm-6 control-label text-right">c. Was the correct resolution code selected?</label>
+                            <div class="col-sm-2 form-inline"><label class="radio-inline">
+                            <input type="radio" name="3r" ng-model="itta.r3" value="3.75">&nbsp; Yes &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="3r" ng-model="itta.r3" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="3r" ng-model="itta.r3" value="3.75"> &nbsp;NA &nbsp;
+                            </label>
+                            </div>
+                            <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea3" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                        </div>
+                        <div class="form-group form-inline">
+                            <label class="col-sm-6 control-label text-right">d. Were the proper updates visible to the customers?</label>
+                            <div class="col-sm-2 form-inline"><label class="radio-inline">
+                            <input type="radio" name="4r" ng-model="itta.r4" value="3.75">&nbsp; Yes &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="4r" ng-model="itta.r4" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                <label class="radio-inline">
+                            <input type="radio" name="4r" ng-model="itta.r4" value="3.75"> &nbsp;NA &nbsp;
+                            </label>
+                            </div>
+                            <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea4" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                        </div>
+                    </div>
+                    <div></div>
+                    <!--Input group - 5, 6-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Were the related records associated and documented accordingly</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. If present, were the related records documented in the case? (for example, internal support / service request)</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="5r" ng-model="itta.r5" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="5r" ng-model="itta.r5" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="5r" ng-model="itta.r5" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea5" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">b. Were the client facing tickets created with correct information while creating ticket on behalf of customer.</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="6r" ng-model="itta.r6" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="6r" ng-model="itta.r6" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="6r" ng-model="itta.r6" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea6" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input group - 7, 8, 9-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Did the Frontline Engineer follow the right process?</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the FL Engineer perform initial response meeting the SLO requirement, and meet FTR SLO in case for tickets in FL scope.</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="7r" ng-model="itta.r7" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="7r" ng-model="itta.r7" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="7r" ng-model="itta.r7" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea7" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">b. Did the FL Engineer assign the ticket to the correct group in case there was a wrong assignment?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="8r" ng-model="itta.r8" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="8r" ng-model="itta.r8" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="8r" ng-model="itta.r8" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea8" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">c. Did the FL Engineer hand over the case with proper documentation?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="9r" ng-model="itta.r9" value="5">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="itta.r9" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="9r" ng-model="itta.r9" value="5"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea9" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input group - 10-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Did the Frontline Engineer conduct the needed investigation steps? Were all available information used properly?</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the FL Engineer investigate using the available information, asking the right questions and act according to the findings?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="10r" ng-model="itta.r10" value="20">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="10r" ng-model="itta.r10" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="10r" ng-model="itta.r10" value="20"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea10" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input group - 11-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Is there a clear documentation of the work done in the case</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the FL Engineer update the ticket with Internal updates and documentation of the work that is done throughout handling request.</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="11r" ng-model="itta.r11" value="15">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="11r" ng-model="itta.r11" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="11r" ng-model="itta.r11" value="15"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea11" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input group - 12, 13, 14-->
+                    <div class="form-group" style="padding-bottom:20px;border:1px solid #cecece;">
+                        <div class="form-group">
+                            <div class="panel-body alert alert-info">
+                                <b> Did the communication with the customer adhere to our standards in terms of professionalism and soft skills?</b>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-left">a. Did the agent address the customer with his first name or with Mr. Last Name?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="12r" ng-model="itta.r12" value="8.33">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="12r" ng-model="itta.r12" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="12r" ng-model="itta.r12" value="8.33"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea12" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">b. Customer communication – Was it crisp and to the point?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="13r" ng-model="itta.r13" value="8.33">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="13r" ng-model="itta.r13" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="13r" ng-model="itta.r13" value="8.33"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea13" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                            <div class="form-group form-inline">
+                                <label class="col-sm-6 control-label text-right">c. Did the FL Engineer communicate with quality writing, without spell and grammatical errors?</label>
+                                <div class="col-sm-2 form-inline"><label class="radio-inline">
+                              <input type="radio" name="14r" ng-model="itta.r14" value="8.33">&nbsp; Yes &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="14r" ng-model="itta.r14" value="0"> &nbsp;No &nbsp;
+                            </label>
+                                    <label class="radio-inline">
+                            <input type="radio" name="14r" ng-model="itta.r14" value="8.33"> &nbsp;NA &nbsp;
+                              </label>
+                                </div>
+                                <div class="col-sm-3"><textarea class="form-control" ng-model="itta.textarea14" rows="2" cols=30 placeholder="Provide reason for Attribute being marked down."></textarea></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer col-md-12">
+                        <center>
+                            <button type="submit" class="btn btn-primary btn-xs"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                            <button type="reset" class="btn btn-danger btn-xs"><i class="fa fa-ban"></i> Reset</button>
+                        </center>
+                    </div>
+                </form>
+            </div>
+        </div>
