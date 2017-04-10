@@ -48,10 +48,42 @@ msfldash.controller('cdsta', function ($scope, $http) {
     };
 });
 
-msfldash.controller('citta', function ($scope) {
+msfldash.controller('citta', function ($scope, $http) {
+    $scope.itta = {};
+    $scope.ittadata ={};
+    $scope.submit = function() {
+        this.ittadata = this.itta;
+        $scope.itta = {};
+       // console.log(this.dstadata.agentname);
+        var request = $http({
+            method: "post",
+            url: "http://localhost:8888/safl/serverpages/add.php",
+            data: this.ittadata,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        })
 
+        .then(function (data) {
+                console.log(data);
+            });
+    };
 });
 
-msfldash.controller('cedta', function ($scope) {
+msfldash.controller('cedta', function ($scope, $http) {
+    $scope.edta = {};
+    $scope.edtadata ={};
+    $scope.submit = function() {
+        this.edtadata = this.edta;
+        $scope.edta = {};
+       // console.log(this.dstadata.agentname);
+        var request = $http({
+            method: "post",
+            url: "http://localhost:8888/safl/serverpages/add.php",
+            data: this.edtadata,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        })
 
+        .then(function (data) {
+                console.log(data);
+            });
+    };
 });
